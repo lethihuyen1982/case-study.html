@@ -4,7 +4,7 @@ let answer = new Answer()
 
 let stages = []
 let quizs_pool = []
-let characters_pool = []
+let characters_pool = ['a','b','c','d','e','g','h','i','k','l','m','n','o','p','q','r','s','t','u','v','x','y']
 let answers = []
 
 function Game() {
@@ -17,7 +17,7 @@ function Game() {
         console.log("Your current score: " + this.score)
      }
     this.startQuiz = function () {
-        let currentQuiz = quizs_pool.[Math.random()*quizs_pool.length]
+        let currentQuiz = quizs_pool.Math.random()*quizs_pool.length
      }
     this.displayAnswer = function () { }
     this.checkAnswer = function () {}
@@ -31,7 +31,7 @@ function Game() {
 
 function Quiz() {
     this.picture = "src"
-    this.character = 
+    this.character = answer.length + characters_pool.Math.random()*characters_pool.length
 
 }
 
