@@ -1,24 +1,96 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Game duoi hinh bat chu</title>
 </head>
+
 <body>
-    <div>
-    <img id="ques_1" src="Ques1.png" alt="Ques1" width="200px" height="100px">
     <canvas id="myCanvas" width="800px" height="800px" style="border: 1px solid black;"> </canvas>
-    <p><button onclick="myCanvas()">Câu hỏi 1</button></p>
+    <img id="pic1" src="home button.jpg" alt="Home" width="50px" height="50px">
     <script>
-        function myCanvas() {
+        drawBoardGame()
+
+        function drawBoardGame() {
             let c = document.getElementById("myCanvas");
             let ctx = c.getContext("2d");
-            let img = document.getElementById("ques_1")
-            ctx.drawImage(img,10,10)
+            let text = ""
+
+
+            drawQuestionBlock()
+
+            function drawQuestionBlock() {
+                ctx.strokeRect(20, 100, 500, 350)
+                ctx.stroke();
+            }
+
+            drawCharacterBlock()
+
+            function drawCharacterBlock() {
+                let charBlock1 = new CharacterBlocks(600, 100, 50, 50,c);
+                let charBlock2 = new CharacterBlocks(600, 150, 50, 50,c);
+                let charBlock3 = new CharacterBlocks(600, 200, 50, 50,c);
+                let charBlock4 = new CharacterBlocks(600, 250, 50, 50,c);
+                let charBlock5 = new CharacterBlocks(600, 300, 50, 50,c);
+                let charBlock6 = new CharacterBlocks(600, 350, 50, 50,c);
+                let charBlock7 = new CharacterBlocks(600, 400, 50, 50,c);
+                let charBlock8 = new CharacterBlocks(700, 100, 50, 50,c);
+                let charBlock9 = new CharacterBlocks(700, 150, 50, 50,c);
+                let charBlock10 = new CharacterBlocks(700, 200, 50, 50,c);
+                let charBlock11 = new CharacterBlocks(700, 250, 50, 50,c);
+                let charBlock12 = new CharacterBlocks(700, 300, 50, 50,c);
+                let charBlock13 = new CharacterBlocks(700, 350, 50, 50,c);
+                let charBlock14 = new CharacterBlocks(700, 400, 50, 50,c);
+
+                function CharacterBlocks(xP, yP, w, h, c) {
+                    this.xP = xP
+                    this.yP = yP
+                    this.w = w
+                    this.h = h
+                    this.c = selectCharacter(text)
+                    ctx.strokeRect(xP, yP, w, h,c)
+                    ctx.stroke();
+
+                    function selectCharacter() {
+                        let charPool = ["a","b","c","d","e","g","h","i","k","l","m","n","o","p","q","r","s","t","u","v","x","y"]
+                        for (let i = 0;i<charPool.length;i++)
+                        text += i
+                        return text
+                    }
+                }
+            }
+
+            drawAnswerBlock()
+
+            function drawAnswerBlock() {
+                ctx.strokeRect(20, 600, 500, 50)
+                ctx.stroke();
+            }
+            let img = document.getElementById("pic1");
+                ctx.drawImage(img, 10, 10);
+
+                ctx.font = "25px Arial";
+                ctx.fillText("HOME", 10, 30);
+
+                ctx.font = "25px Arial";
+                ctx.fillText("LEVEL 1", 150, 30);
+
+                ctx.font = "25px Arial";
+                ctx.fillText("HINT", 300, 30);
+
+                ctx.font = "25px Arial";
+                ctx.fillText("POINT", 450, 30);
+
+                ctx.font = "25px Arial";
+                ctx.fillText("NEXT", 600, 30);
+
+
         }
+
     </script>
-    </div>
 </body>
+
 </html>
