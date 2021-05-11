@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kiem tra va cham</title>
+</head>
+
+<body>
+    <script>
+        function Ant(xPosition) {
+            this.xPosition = xPosition
+        }
+
+        let ant1 = new Ant(5)
+        let ant2 = new Ant(6)
+
+        checkTouch(ant1,ant2)
+
+        function checkTouch(ant1, ant2) {
+            let result = (ant1.xPosition == ant2.xPosition)
+            console.log(result)
+        }
+
+        function Rice(upperPosition,lowerPosition) {
+            this.upperPosition = upperPosition
+            this.lowerPosition = lowerPosition
+        }
+
+        let rice = new Rice(7,4)
+
+        checkTouchBetweenAntAndRice(ant1,rice)
+
+        function checkTouchBetweenAntAndRice(ant1,rice) {
+            let result = (ant1.xPosition >=rice.lowerPosition && ant1.xPosition <=rice.upperPosition)
+            console.log(result)
+        }
+    </script>
+
+    
+</body>
+
+</html>
