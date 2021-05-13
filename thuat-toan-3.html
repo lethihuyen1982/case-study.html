@@ -30,11 +30,18 @@
         }
 
         let rice = new Rice(7,4)
+        let rice2 = new Rice (8,4)
 
         checkTouchBetweenAntAndRice(ant1,rice)
 
         function checkTouchBetweenAntAndRice(ant1,rice) {
             let result = (ant1.xPosition >=rice.lowerPosition && ant1.xPosition <=rice.upperPosition)
+            console.log(result)
+        }
+
+        checkTouchBetweenRiceAndRice(rice,rice2)
+        function checkTouchBetweenRiceAndRice(rice,rice2) {
+            let result = (rice.upperPosition>=rice2.lowerPosition && rice.upperPosition<=rice2.upperPosition)
             console.log(result)
         }
     </script>
