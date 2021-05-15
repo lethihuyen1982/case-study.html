@@ -5,6 +5,7 @@ function ViewEngine() {
     drawBoardGame()
     
     this.displayQuestion = function (question) {
+        ctx.clearRect(20, 100, 500, 350);
         let image = new Image();
         image.src = question.getPicture();
         image.onload = function () {
