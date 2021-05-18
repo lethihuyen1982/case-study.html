@@ -12,6 +12,9 @@ function ViewEngine() {
             ctx.drawImage(image, 50, 200);
         };
     }
+    this.displayPoint = function(point) {
+        document.getElementById("point").innerHTML = "POINT: " + point
+    }
     
     function drawBoardGame() {
         let text = ""
@@ -46,6 +49,8 @@ function ViewEngine() {
             ctx.strokeRect(20, 100, 500, 350)
             ctx.stroke();
         }
+
+
 
         function drawCharacterBlock() {
             let charBlock1 = new CharacterBlocks(600, 100, 50, 50, c);
