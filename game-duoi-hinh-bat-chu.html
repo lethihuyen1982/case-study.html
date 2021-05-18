@@ -9,16 +9,27 @@
     <script src="view-engine.js"></script>
     <script src="question.js"></script>
     <script src="question-pool.js"></script>
+    <script src ="game.js"></script>
 </head>
 
 <body>
     <canvas id="myCanvas" width="800px" height="800px" style="border: 1px solid black;"> </canvas>
+    <br>
+    <br>
+    Answer <input id="answer" type="text" width ="200px" height="100px">
+    <br>
+    <br>
+    <button id="check_answer">Check Answer</button>
+    <br>
+    <br>
+    <p id = "point" style="color: green;">POINT:  0</p> 
+    <br>
+    <br>
+    <p id = "level" style="color: green;">LEVEL:  1</p> 
 
     <script>
-        let viewEngine = new ViewEngine()
-        let questionPool = new QuestionPool()
-        let nextQuestion = questionPool.nextQuestion()
-        viewEngine.displayQuestion(nextQuestion)
+        let game = new Game()
+        document.getElementById("check_answer").addEventListener("click",game.checkAnswer)
     </script>
 </body>
 
