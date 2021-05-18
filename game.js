@@ -11,6 +11,7 @@ function Game() {
     function updateView() {
         viewEngine.displayQuestion(currentQuestion)
         viewEngine.displayPoint(point)
+        viewEngine.clearPreviousAnser()
     }
 
     this.checkAnswer = function () {
