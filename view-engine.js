@@ -18,6 +18,9 @@ function ViewEngine() {
     this.clearPreviousAnser = function() {
         document.getElementById("answer").value = ""
     }
+    this.displayHint = function(_hint) {
+        document.getElementById("hint").innerHTML = "HINT: " + _hint
+    }
     
     function drawBoardGame() {
             ctx.strokeRect(20, 100, 500, 350)
