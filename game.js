@@ -6,12 +6,15 @@ function Game() {
     this.getPoint = function () {
         return point
     }
+    
     updateView()
 
     function updateView() {
         viewEngine.displayQuestion(currentQuestion)
         viewEngine.displayPoint(point)
         viewEngine.clearPreviousAnser()
+        viewEngine.displayHint(currentQuestion.getHint())
+
     }
 
     this.checkAnswer = function () {
