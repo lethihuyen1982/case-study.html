@@ -9,27 +9,29 @@
     <script src="view-engine.js"></script>
     <script src="question.js"></script>
     <script src="question-pool.js"></script>
-    <script src ="game.js"></script>
+    <script src="game.js"></script>
 </head>
+<style type="text/css" media="screen">
+    div {
+        padding: 30px;
+        margin: 10px;
+        width: 700px;
+        border: 1px solid orange;
+    }
+</style>
 
 <body>
-    <canvas id="myCanvas" width="800px" height="800px" style="border: 1px solid black;"> </canvas>
-    <br>
-    <br>
-    Answer <input id="answer" type="text" width ="200px" height="100px">
-    <br>
-    <br>
-    <button id="check_answer">Check Answer</button>
-    <br>
-    <br>
-    <p id = "point" style="color: green;">POINT:  0</p> 
-    <br>
-    <br>
-    <p id = "level" style="color: green;">LEVEL:  1</p> 
+    <div class="absolute">
+        <h1>GAME DUOI HINH BAT CHU</h1>
+        <p id="point" style="color: green;">POINT: 0</p>
+        ANSWER <input id="answer" type="text" width="200px" height="300px">
+        <button id="check_answer">CHECK ANSWER</button>
+        <canvas id="myCanvas" width="700px" height="500px" style="border: 1px solid black;"> </canvas>
+    </div>
 
     <script>
         let game = new Game()
-        document.getElementById("check_answer").addEventListener("click",game.checkAnswer)
+        document.getElementById("check_answer").addEventListener("click", game.checkAnswer)
     </script>
 </body>
 
