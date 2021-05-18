@@ -1,15 +1,15 @@
 function QuestionPool () {
     let questionPool = [
-        new Question ("Ques1.png","khong khi","khong noi"),
-        new Question ("Ques2.png","ba lo","khong noi"),
-        new Question ("Ques3.png","dong vat","khong noi"),
-        new Question ("Ques4.png","thong qua","khong noi"),
-        new Question ("Ques5.png","nguyen nhan","khong noi"),
-        new Question ("Ques6.png","dat nuoc","khong noi"),
-        new Question ("Ques7.png","nghien cuu","khong noi"),
-        new Question ("Ques8.png","mat troi","khong noi"),
-        new Question ("Ques9.png","nhan dan","khong noi"),
-        new Question ("Ques10.png","nha nuoc","khong noi"),
+        new Question ("Ques1.png","khong khi","k"),
+        new Question ("Ques2.png","ba lo","b"),
+        new Question ("Ques3.png","dong vat","d"),
+        new Question ("Ques4.png","thong qua","t"),
+        new Question ("Ques5.png","nguyen nhan","n"),
+        new Question ("Ques6.png","dat nuoc","d"),
+        new Question ("Ques7.png","nghien cuu","n"),
+        new Question ("Ques8.png","mat troi","m"),
+        new Question ("Ques9.png","nhan dan","n"),
+        new Question ("Ques10.png","nha nuoc","n"),
     ]
     
     this.nextQuestion = function() {
