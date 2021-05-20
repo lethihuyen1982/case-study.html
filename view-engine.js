@@ -15,11 +15,18 @@ function ViewEngine() {
     this.displayPoint = function(point) {
         document.getElementById("point").innerHTML = "POINT: " + point
     }
+    this.hideHint = function(_hint) {
+        document.getElementById("hint").innerHTML = "HINT  "
+    }
     this.clearPreviousAnser = function() {
         document.getElementById("answer").value = ""
     }
     this.displayHint = function(_hint) {
-        document.getElementById("hint").innerHTML = "HINT: " + _hint
+        document.getElementById("hint").innerHTML = "HINT:  " + _hint
+
+    }
+    this.displayScoreOfCurrentQuestion = function(_score) {
+        document.getElementById("score").innerHTML = "SCORE OF CURRENT QUESTION: " + _score
     }
     
     function drawBoardGame() {
