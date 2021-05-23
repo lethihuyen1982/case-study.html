@@ -28,7 +28,9 @@ function ViewEngine() {
     this.displayScoreOfCurrentQuestion = function(_score) {
         document.getElementById("score").innerHTML = "SCORE OF CURRENT QUESTION: " + _score
     }
-    
+    this.displayLevel = function(level) {
+        document.getElementById("level").innerHTML = "LEVEL: " + level
+    }
     function drawBoardGame() {
             ctx.strokeRect(20, 100, 500, 350)
             ctx.stroke();
