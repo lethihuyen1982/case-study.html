@@ -11,9 +11,13 @@ function QuestionPool () {
         new Question ("Ques9.png","nhan dan","n","20"),
         new Question ("Ques10.png","nha nuoc","n","20"),
     ]
-    
+    let randomIndex
     this.nextQuestion = function() {
-        let randomIndex = Math.round(Math.random()*(questionPool.length-1))
+        randomIndex = Math.round(Math.random()*(questionPool.length-1))
         return questionPool[randomIndex]
     }
-}
+    this.previousQuestion = function() {
+        let newQuestionPool = delete questionPool[randomIndex]
+        return newQuestionPool
+    }
+}   
