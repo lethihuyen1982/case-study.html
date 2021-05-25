@@ -19,7 +19,7 @@ function Game() {
         viewEngine.displayQuestion(currentQuestion)
         viewEngine.displayScoreOfCurrentQuestion(currentQuestion.getScore())
         viewEngine.displayPoint(point)
-        viewEngine.clearPreviousAnser()
+        viewEngine.clearPreviousAnswer()
         viewEngine.hideHint()
         viewEngine.displayLevel(level)
         hintOpenned = false
@@ -29,27 +29,35 @@ function Game() {
         let answerOfPlayer = document.getElementById("answer").value
         let isRightAnswer = (answerOfPlayer == currentQuestion.getAnswer())
         if (isRightAnswer) {
-            if (hintOpenned==true) {
-                point = point + Number(currentQuestion.getScore()) / 2
-            }
-            else {
-                point = point + Number(currentQuestion.getScore())
-            }
-
-            if (point <= 60) {
-                level = 1
-            }
-            else if (point > 60 && point <= 120) {
-                level = 2
-            }
-            else {
-                level = 3
-            }
+            increasePoint()
+            increaseLevel()
+           
         currentQuestion = questionPool.nextQuestion()
         updateView()
         }
         else {
             alert("GAME OVER")
+        }
+    }
+
+    function increasePoint() {
+        if (hintOpenned==true) {
+            point = point + Number(currentQuestion.getScore()) / 2
+        }
+        else {
+            point = point + Number(currentQuestion.getScore())
+        }
+    }
+
+    function increaseLevel() {
+        if (point <= 60) {
+            level = 1
+        }
+        else if (point > 60 && point <= 120) {
+            level = 2
+        }
+        else {
+            level = 3
         }
     }
 }
