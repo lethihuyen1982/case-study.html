@@ -18,9 +18,10 @@ function ViewEngine() {
     this.hideHint = function(_hint) {
         document.getElementById("hint").innerHTML = "HINT  "
     }
-    this.clearPreviousAnser = function() {
+    this.clearPreviousAnswer = function() {
         document.getElementById("answer").value = ""
     }
+    
     this.displayHint = function(_hint) {
         document.getElementById("hint").innerHTML = "HINT:  " + _hint
 
